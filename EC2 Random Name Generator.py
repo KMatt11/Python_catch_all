@@ -21,7 +21,6 @@ import string
 depts = set(['marketing', 'accounting', 'finops'])
 depts_name = input("Hello! What is the name of your department: ").lower()
 
-
 if depts_name not in depts: 
     print("Your Department is not available. Please try again.")
     exit()
@@ -36,4 +35,9 @@ if ec2_inst== "yes":
 elif ec2_inst== "no":
     print("Thank you for visiting. Goodbye!")
 
-ec2_inst = int(input("How many EC2 instances will you unique names generated for: "))
+ec2_inst = input("How many EC2 instances will you unique names generated for: ")
+ec2_inst = int(ec2_inst)
+for _ in range(ec2_inst):
+
+    n = random.random()
+    print(depts_name, '_',n)
