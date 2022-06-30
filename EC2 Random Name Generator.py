@@ -25,7 +25,7 @@ if depts_name not in depts:
     print("Your Department is not available. Please try again.")
     exit()
     
-# Prompt the user with a message and get their input.
+# Prompt the user with a yes/no.
 # Convert their input to lowercase.
 ec2_inst = input("Will you need unique generated names for your department? Please enter YES/NO to continue:").lower()
 
@@ -34,11 +34,14 @@ if ec2_inst== "yes":
     
 elif ec2_inst== "no":
     print("Thank you for visiting. Goodbye!")
+    exit()
 
+# Prompt the user with a message and get number of EC2 instances needed. 
 ec2_inst = input("How many EC2 instances will you unique names generated for: ")
 ec2_inst = int(ec2_inst)
 for _ in range(ec2_inst):
 
+# Print Department name along with random number from 0 to 100000000.
     n = random.randint(0,100000000)
     print("Department Name Generator: ")
     print(depts_name,'_', str(n))
