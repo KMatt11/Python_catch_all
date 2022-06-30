@@ -39,5 +39,6 @@ ec2_inst = input("How many EC2 instances will you unique names generated for: ")
 ec2_inst = int(ec2_inst)
 for _ in range(ec2_inst):
 
-    n = random.random()
-    print(depts_name, '_',n)
+    n = random.randint(0,100000000)
+    print("Department Name Generator: ")
+    print(depts_name,'_', str(n))
