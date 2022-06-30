@@ -35,7 +35,5 @@ if ec2_inst== "yes":
     
 elif ec2_inst== "no":
     print("Thank you for visiting. Goodbye!")
-    
-ec2_number = int(input("How many EC2 instances will you unique names generated for: "))
-   
-  
+
+ec2_inst = int(input("How many EC2 instances will you unique names generated for: "))
