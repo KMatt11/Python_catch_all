@@ -9,6 +9,33 @@
 
 #The Python Script should:
 
-# 1. Allow the user to input how many EC2 instances they want names for and output the same amount of unique names.
-# 2. Allow the user to input the name of their department that is used in the unique name.
+# 1. Allow the user to input the name of their department that is used in the unique name.
+# 2. Allow the user to input how many EC2 instances they want names for and output the same amount of unique names.
 # 3. Generate random characters and numbers that will be included in the unique name.
+
+import random
+import string
+
+# Prompt the user with a message and get their input.
+# Convert their input to lowercase.
+depts = set(['marketing', 'accounting', 'finops'])
+depts_name = input("Hello! What is the name of your department: ").lower()
+
+
+if depts_name not in depts: 
+    print("Your Department is not available. Please try again.")
+    exit()
+    
+# Prompt the user with a message and get their input.
+# Convert their input to lowercase.
+while True:    
+    cont = input("Will you need unique generated names for your department? Please enter YES/NO to continue").lower()
+    if cont=="yes": 
+        continue
+    elif cont== "no":
+    print("Thank you for visiting. Please exit system")
+    exit()
+    
+ec2_inst = int(input("How many EC2 instances will you unique names generated for: "))
+    print("Generated Name ")
+     
