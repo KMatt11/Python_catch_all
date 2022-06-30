@@ -28,14 +28,14 @@ if depts_name not in depts:
     
 # Prompt the user with a message and get their input.
 # Convert their input to lowercase.
-while True:    
-    cont = input("Will you need unique generated names for your department? Please enter YES/NO to continue").lower()
-    if cont=="yes": 
-        continue
-    elif cont== "no":
-    print("Thank you for visiting. Please exit system")
-    exit()
+ec2_inst = input("Will you need unique generated names for your department? Please enter YES/NO to continue:").lower()
+
+if ec2_inst== "yes":
+    print("Thank you. Please continue: ")
     
-ec2_inst = int(input("How many EC2 instances will you unique names generated for: "))
-    print("Generated Name ")
-     
+elif ec2_inst== "no":
+    print("Thank you for visiting. Goodbye!")
+    
+ec2_number = int(input("How many EC2 instances will you unique names generated for: "))
+   
+  
